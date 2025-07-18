@@ -70,7 +70,7 @@ export const TailwindPopOver = ({
                                         <div className="h-1 bg-gray-200 dark:bg-gray-600"></div>
                                         <div className="h-1 bg-gray-200 dark:bg-gray-600"></div>
                                     </div>
-                                    <p>It's better to have:</p>
+                                    <p>It&apos;s better to have:</p>
                                     <ul>
                                         <li className="flex items-center mb-1">
                                             <svg className="w-3.5 h-3.5 me-2 text-green-400 dark:text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">

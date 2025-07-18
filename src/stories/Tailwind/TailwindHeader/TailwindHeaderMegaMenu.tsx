@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface MenuItem {
     label: string;
@@ -35,7 +36,7 @@ export const TailwindHeaderMegaMenu = ({
             <nav className="bg-white border-gray-200 dark:bg-gray-900">
                 <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
                     <Link href="https://flowbite.com" className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <img src={"/tailwindcss-logo.svg"} className="mr-3 h-6 sm:h-9" alt="Logo" />
+                        <Image src={"/tailwindcss-logo.svg"} width={36} height={36} className="mr-3 h-6 sm:h-9" alt="Logo" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SiteName</span>
                     </Link>
                     <div className="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">

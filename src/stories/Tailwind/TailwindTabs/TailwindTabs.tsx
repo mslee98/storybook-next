@@ -211,7 +211,7 @@ export const TailwinTabs = ({
                 {activeTab === 'profile' && (
                     <div className="flex-1">
                         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Profile Tab</h3>
-                        <p className="mb-2">This is some placeholder content for the Profile tab's associated content. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                        <p className="mb-2">This is some placeholder content for the Profile tab&apos;s associated content. The tab JavaScript swaps classes to control the content visibility and styling.</p>
                     </div>
                 )}
                 
