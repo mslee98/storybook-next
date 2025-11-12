@@ -33,6 +33,43 @@ const config: StorybookConfig = {
       include: "**/*.svg",
     }));
 
+    // Three.js 및 React Three Fiber 최적화
+    config.optimizeDeps = {
+      ...config.optimizeDeps,
+      include: [
+        ...(config.optimizeDeps?.include || []),
+        'three',
+        '@react-three/fiber',
+        '@react-three/drei',
+        'react-reconciler',
+        'scheduler',
+      ],
+      esbuildOptions: {
+        ...config.optimizeDeps?.esbuildOptions,
+        target: 'es2020',
+      },
+    };
+
+    // Three.js 관련 모듈 처리
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        ...config.resolve?.alias,
+      },
+      dedupe: [
+        ...(config.resolve?.dedupe || []),
+        'react',
+        'react-dom',
+        'three',
+      ],
+    };
+
+    // SSR 비활성화 (React Three Fiber는 클라이언트 전용)
+    config.ssr = {
+      ...config.ssr,
+      noExternal: ['@react-three/fiber', '@react-three/drei'],
+    };
+
     return config;
   }
 };
